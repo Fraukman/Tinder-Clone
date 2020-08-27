@@ -18,24 +18,18 @@ class CardView: UIView {
     
     private let gradientLayer = CAGradientLayer()
     
+    private let viewModel: CardViewModel
+    
     private let imageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
-        iv.image = #imageLiteral(resourceName: "lady4c")
         return iv
     }()
     
-    private let infoLabel: UILabel = {
+    private lazy var infoLabel: UILabel = {
        let label = UILabel()
         label.numberOfLines = 2
-        
-        let attributedText = NSMutableAttributedString(string: "Jane Doe", attributes: [.font:
-            UIFont.systemFont(ofSize: 32, weight: .heavy),.foregroundColor: UIColor.white])
-        
-        attributedText.append(NSAttributedString(string: "  20", attributes: [.font:
-        UIFont.systemFont(ofSize: 24),.foregroundColor: UIColor.white]))
-        
-        label.attributedText = attributedText
+        label.attributedText = viewModel.userInfoText
         return label
     }()
     
@@ -47,10 +41,13 @@ class CardView: UIView {
     
     //MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+     init(viewModel: CardViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
+
         configureGestureRecognizers()
+        
+        imageView.image = viewModel.user.images.first
         
         backgroundColor = .systemPurple
         layer.cornerRadius = 10
@@ -98,7 +95,17 @@ class CardView: UIView {
        }
        
        @objc func handleChangePhoto(sender: UITapGestureRecognizer){
-           print("DEBUG: Did tap on photo...")
+        let location = sender.location(in: nil).x
+        let shouldShowNextPhoto = location > self.frame.width / 2
+        
+        if shouldShowNextPhoto {
+            viewModel.showNextPhoto()
+        }else{
+            viewModel.showPreviousPhoto()
+        }
+        
+        imageView.image = viewModel.imageToShow
+        
        }
     
     //MARK: - Helper Functions

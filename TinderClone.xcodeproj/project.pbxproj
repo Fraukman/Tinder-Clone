@@ -17,6 +17,8 @@
 		0D114DAC24F5B508009CD0E6 /* HomeNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D114DAB24F5B508009CD0E6 /* HomeNavigationStackView.swift */; };
 		0D114DAE24F5BDE0009CD0E6 /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D114DAD24F5BDE0009CD0E6 /* BottomControlsStackView.swift */; };
 		0D114DB024F5C2AD009CD0E6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D114DAF24F5C2AD009CD0E6 /* CardView.swift */; };
+		0D6E251224F8451D009B13C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E251124F8451D009B13C8 /* User.swift */; };
+		0D6E251424F845F0009B13C8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E251324F845F0009B13C8 /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		0D114DAB24F5B508009CD0E6 /* HomeNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStackView.swift; sourceTree = "<group>"; };
 		0D114DAD24F5BDE0009CD0E6 /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
 		0D114DAF24F5C2AD009CD0E6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0D6E251124F8451D009B13C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0D6E251324F845F0009B13C8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		0D114DA324F5B281009CD0E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0D6E251324F845F0009B13C8 /* CardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 		0D114DA524F5B286009CD0E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0D6E251124F8451D009B13C8 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,9 +208,11 @@
 				0D114DAE24F5BDE0009CD0E6 /* BottomControlsStackView.swift in Sources */,
 				0D114D8E24F5B256009CD0E6 /* AppDelegate.swift in Sources */,
 				0D114DAC24F5B508009CD0E6 /* HomeNavigationStackView.swift in Sources */,
+				0D6E251224F8451D009B13C8 /* User.swift in Sources */,
 				0D114D9024F5B256009CD0E6 /* SceneDelegate.swift in Sources */,
 				0D114DA824F5B334009CD0E6 /* HomeController.swift in Sources */,
 				0D114DAA24F5B42C009CD0E6 /* Extensions.swift in Sources */,
+				0D6E251424F845F0009B13C8 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

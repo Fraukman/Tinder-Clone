@@ -35,8 +35,13 @@ class HomeController: UIViewController{
     //MARK: - Helper Functions
     
     func configureCards(){
-        let cardView1 = CardView()
-        let cardView2 = CardView()
+        
+        
+        let user1 = User(name: "Jane Doe", age: 22, images: [#imageLiteral(resourceName: "jane1"),#imageLiteral(resourceName: "jane2")])
+        let user2 = User(name: "Megan", age: 21, images: [#imageLiteral(resourceName: "kelly2"),#imageLiteral(resourceName: "lady5c")])
+        
+        let cardView1 = CardView(viewModel: CardViewModel(user: user1))
+        let cardView2 = CardView(viewModel: CardViewModel(user: user2))
         
         deckView.addSubview(cardView1)
         deckView.addSubview(cardView2)
